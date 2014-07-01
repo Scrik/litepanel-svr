@@ -143,7 +143,7 @@ def serverStart():
 	execCmd = execCmd.replace('@port2@', str(port+1))
 	execCmd = execCmd.replace('@port3@', str(port+1000))
 	execCmd = execCmd.replace('@slots@', str(slots))
-	os.system('su -lc "screen -AmdS gameserver ' + execCmd + '" ' + username)
+	os.system('su -lc "screen -AmdLS gameserver ' + execCmd + '" ' + username)
 	return True
 
 def serverStop():
